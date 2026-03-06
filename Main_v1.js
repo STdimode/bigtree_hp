@@ -255,14 +255,16 @@ function toggleMobileMenu() {
   const iconMenu = document.getElementById("icon-menu");
   const iconClose = document.getElementById("icon-close");
 
-  if (overlay.style.display === "none" || overlay.style.display === "") {
-    overlay.style.display = "block";
+  if (overlay.classList.contains("hidden")) {
+    overlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
     btn.style.color = "#333333";
     btn.style.position = "relative";
     btn.style.zIndex = "60";
-    iconMenu.style.display = "none";
-    iconClose.style.display = "block";
+    iconMenu.classList.add("hidden");
+    iconMenu.classList.remove("block");
+    iconClose.classList.add("block");
+    iconClose.classList.remove("hidden");
   } else {
     closeMobileMenu();
   }
@@ -274,13 +276,15 @@ function closeMobileMenu() {
   const iconMenu = document.getElementById("icon-menu");
   const iconClose = document.getElementById("icon-close");
 
-  overlay.style.display = "none";
+  overlay.classList.add("hidden");
   document.body.style.overflow = "";
   btn.style.color = "";
   btn.style.position = "";
   btn.style.zIndex = "";
-  iconMenu.style.display = "block";
-  iconClose.style.display = "none";
+  iconMenu.classList.add("block");
+  iconMenu.classList.remove("hidden");
+  iconClose.classList.add("hidden");
+  iconClose.classList.remove("block");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
