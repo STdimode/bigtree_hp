@@ -1,0 +1,8 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+@font-face {
+    font-family: 'HsBombaram20';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
