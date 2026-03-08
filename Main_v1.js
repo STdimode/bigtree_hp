@@ -775,18 +775,46 @@ document.addEventListener("DOMContentLoaded", initGallery);
 /*  Parallax Setup                                                    */
 /* ================================================================== */
 function initParallax() {
-  const section = document.getElementById("welcome");
-  const bg = document.getElementById("welcome-bg");
-  if (!section || !bg) return;
+  const welcomeSection = document.getElementById("welcome");
+  const welcomeBg = document.getElementById("welcome-bg");
+  const worshipSection = document.getElementById("worship");
 
   const speed = 0.6;
 
   function tick() {
-    const rect = section.getBoundingClientRect();
     const windowH = window.innerHeight;
-    const progress = 1 - (rect.top + rect.height) / (windowH + rect.height);
-    const offset = (progress - 0.5) * windowH * speed;
-    bg.style.transform = `translate3d(0, ${offset}px, 0)`;
+
+    // Welcome Section Parallax
+    if (welcomeSection && welcomeBg) {
+      const rect = welcomeSection.getBoundingClientRect();
+      const progress = 1 - (rect.top + rect.height) / (windowH + rect.height);
+      const offset = (progress - 0.5) * windowH * speed;
+      welcomeBg.style.transform = `translate3d(0, ${offset}px, 0)`;
+    }
+
+    // Worship Section Parallax
+    if (worshipSection) {
+      const wRect = worshipSection.getBoundingClientRect();
+      const wProgress = 1 - (wRect.top + wRect.height) / (windowH + wRect.height);
+      const wOffset = (wProgress - 0.5) * windowH * speed;
+
+      // Update PC inner
+      const pcParallaxInner = document.querySelector('.cms-worship-pc-grid .cms-worship-parallax-inner');
+      if (pcParallaxInner) {
+        pcParallaxInner.style.transform = `translate3d(0, ${wOffset * 0.5}px, 0)`;
+      }
+
+      // Update Mobile inner if we added one, otherwise directly translate the mob wrap/img
+      const mobParallaxWrap = document.querySelector('.cms-worship-image-wrap-mob');
+      if (mobParallaxWrap) {
+        // We'll apply it to the image directly to simulate inner parallax
+        const mobImg = mobParallaxWrap.querySelector('img');
+        if (mobImg) {
+          mobImg.style.transform = `translate3d(0, ${wOffset * 0.5}px, 0) scale(1.15)`;
+        }
+      }
+    }
+
     requestAnimationFrame(tick);
   }
 
