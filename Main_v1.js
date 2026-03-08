@@ -297,9 +297,9 @@ document.addEventListener("DOMContentLoaded", () => {
 /*  Hero Slider                                                       */
 /* ================================================================== */
 const heroSlides = [
-  { image: "/UserData/bigtreech/Layouts/bigtreech_Layout/images/a2580ae9d24c601f6c1e07fd729847adead18c8a.png" },
-  { image: "/UserData/bigtreech/Layouts/bigtreech_Layout/images/54a0b0179e6efb1865be9f90287c7a3b4c813b97.png" },
-  { image: "/UserData/bigtreech/Layouts/bigtreech_Layout/images/84ab185d9df6befe402cb5f8f2778f6ff36b17b2.png" },
+  { image: "/UserData/bigtreech/Layouts/bigtreech_Layout/images/slider_1.jpg" },
+  { image: "/UserData/bigtreech/Layouts/bigtreech_Layout/images/slider_2.jpg" },
+  { image: "/UserData/bigtreech/Layouts/bigtreech_Layout/images/slider_3.jpg" },
 ];
 
 let heroCurrentIndex = 0;
