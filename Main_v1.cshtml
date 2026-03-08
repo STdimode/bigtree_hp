@@ -1,0 +1,389 @@
+@{
+    string layoutPath = "/UserData/bigtreech/Layouts/bigtreech_Layout";
+    string cssFile = layoutPath + "/Contents/Main_v1.css";
+    string jsFile = layoutPath + "/Scripts/Main_v1.js";
+    // 로컬 전환용 주석 (필요 시 해제)
+    // string localFontCss = layoutPath + "/Contents/fonts.css";
+}
+
+@* <link href="@Url.Content("~" + localFontCss)" rel="stylesheet" /> *@
+<link href="@Url.Content("~" + cssFile)" rel="stylesheet" />
+
+<div class="cms-content-root cms-main-layout">
+
+  <!-- Header -->
+  <header class="cms-header">
+    <div class="cms-header-container">
+      <!-- Logo -->
+      <a href="#" class="cms-logo-link">
+        <img
+          src="/UserData/bigtreech/Layouts/bigtreech_Layout/images/1_logo.png"
+          alt="큰나무교회 로고"
+          class="cms-logo-img"
+        />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="cms-desktop-nav" id="desktop-nav">
+        <!-- Injected via JS -->
+      </nav>
+
+      <div class="cms-header-actions">
+        <!-- Login icon -->
+        <button class="cms-login-btn group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-md"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span class="cms-login-tooltip group-hover:opacity-100">
+            로그인
+          </span>
+        </button>
+
+        <!-- Hamburger -->
+        <button
+          id="mobile-menu-btn"
+          class="cms-hamburger-btn"
+        >
+          <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-lg block"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-lg hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Fullscreen overlay menu -->
+    <div id="mobile-overlay" class="cms-mobile-overlay hidden">
+      <div class="cms-overlay-container">
+        <div id="mobile-nav-grid" class="cms-overlay-grid">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Slider -->
+    <section id="hero-section" class="cms-hero-section">
+      <div id="slider-container">
+        <!-- Slides injected via JS -->
+      </div>
+
+      <!-- Arrows -->
+      <button id="hero-prev-btn" class="cms-hero-arrow cms-hero-arrow-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-lg"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button id="hero-next-btn" class="cms-hero-arrow cms-hero-arrow-next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-lg"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+
+      <!-- Dots -->
+      <div id="slider-dots" class="cms-hero-dots">
+        <!-- Dots injected via JS -->
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="cms-quick-links-section fade-up">
+      <div class="cms-container">
+        <!-- Welcome label -->
+        <p class="cms-welcome-label">Welcome to Bigtree Church</p>
+
+        <div class="cms-quick-links-grid">
+          <a href="#bulletin" class="cms-quick-link group">
+            <div class="cms-quick-link-icon-wrap group-hover:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter" class="cms-quick-link-icon group-hover:text-accent"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            </div>
+            <span class="cms-quick-link-title">주보</span>
+            <span class="cms-quick-link-desc group-hover:opacity-100">이번 주 예배 안내와 소식</span>
+          </a>
+
+          <a href="#map" class="cms-quick-link group">
+            <div class="cms-quick-link-icon-wrap group-hover:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter" class="cms-quick-link-icon group-hover:text-accent"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span class="cms-quick-link-title">오시는 길</span>
+            <span class="cms-quick-link-desc group-hover:opacity-100">교회 위치 및 교통편 안내</span>
+          </a>
+
+          <a href="#facility" class="cms-quick-link group">
+            <div class="cms-quick-link-icon-wrap group-hover:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter" class="cms-quick-link-icon group-hover:text-accent"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+            </div>
+            <span class="cms-quick-link-title">시설·주차</span>
+            <span class="cms-quick-link-desc group-hover:opacity-100">교회 시설 및 주차장 안내</span>
+          </a>
+
+          <a href="#welcome" class="cms-quick-link group">
+            <div class="cms-quick-link-icon-wrap group-hover:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter" class="cms-quick-link-icon group-hover:text-accent"><path d="M12 15c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3Z" /><path d="M12 9V4.5" /><path d="M15 12h4.5" /><path d="M12 15v4.5" /><path d="M9 12H4.5" /><path d="M12 9a3 3 0 0 0-3-3" /><path d="M12 9a3 3 0 0 1 3-3" /><path d="M15 12a3 3 0 0 0 3-3" /><path d="M15 12a3 3 0 0 1 3 3" /><path d="M12 15a3 3 0 0 1 3 3" /><path d="M12 15a3 3 0 0 0-3 3" /><path d="M9 12a3 3 0 0 1-3 3" /><path d="M9 12a3 3 0 0 0-3-3" /></svg>
+            </div>
+            <span class="cms-quick-link-title">새가족 안내</span>
+            <span class="cms-quick-link-desc group-hover:opacity-100">처음 오시는 분을 환영합니다</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="cms-messages-section fade-up" id="about">
+      <div class="cms-container">
+        <!-- Section Header -->
+        <div class="cms-section-header">
+          <div class="cms-section-title-wrap">
+            <h2 class="cms-section-title">MESSAGES</h2>
+          </div>
+          <!-- View all -->
+          <a href="#" class="cms-view-all-link group/link">
+            view all
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-sm"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Divider -->
+        <div class="cms-divider"></div>
+
+        <!-- Cards -->
+        <div class="cms-messages-grid">
+          <!-- Card 1 -->
+          <div class="cms-message-card group">
+            <p class="cms-message-meta">2026.03.08 | 이시호 담임목사</p>
+            <p class="cms-message-title">감추어진 비밀, 드러난 은혜</p>
+            <div class="cms-message-thumb-wrap">
+              <img src="/UserData/bigtreech/Layouts/bigtreech_Layout/images/thumbnail_1.jpg" alt="감추어진 비밀, 드러난 은혜" class="cms-message-thumb group-hover:scale-105" />
+            </div>
+            <a href="#" class="cms-message-more">more</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="cms-message-card group hidden md:block">
+            <p class="cms-message-meta">2026.03.08 | 이시호 담임목사</p>
+            <p class="cms-message-title">감추어진 비밀, 드러난 은혜</p>
+            <div class="cms-message-thumb-wrap">
+              <img src="/UserData/bigtreech/Layouts/bigtreech_Layout/images/thumbnail_2.jpg" alt="감추어진 비밀, 드러난 은혜" class="cms-message-thumb group-hover:scale-105" />
+            </div>
+            <a href="#" class="cms-message-more">more</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="cms-message-card group hidden md:block">
+            <p class="cms-message-meta">2026.03.08 | 이시호 담임목사</p>
+            <p class="cms-message-title">감추어진 비밀, 드러난 은혜</p>
+            <div class="cms-message-thumb-wrap">
+              <img src="/UserData/bigtreech/Layouts/bigtreech_Layout/images/thumbnail_3.jpg" alt="감추어진 비밀, 드러난 은혜" class="cms-message-thumb group-hover:scale-105" />
+            </div>
+            <a href="#" class="cms-message-more">more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Worship Schedule -->
+    <section class="cms-worship-section fade-up" id="worship">
+      <div class="cms-container">
+
+        <!-- ═══ PC LAYOUT (lg+) ═══ -->
+        <div class="hidden lg:block">
+          <!-- Title + arrows -->
+          <div class="cms-section-header">
+            <h2 class="cms-section-title">WORSHIP SCHEDULE</h2>
+            <div class="cms-nav-controls">
+              <button id="ws-pc-prev" class="cms-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-md"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <span id="ws-pc-indicator" class="cms-nav-indicator">1 / 2</span>
+              <button id="ws-pc-next" class="cms-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-md"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="cms-divider-loose"></div>
+
+          <!-- Content grid -->
+          <div class="cms-worship-pc-grid">
+            <div id="ws-pc-content" class="cms-worship-content-box">
+              <!-- Injected via JS -->
+            </div>
+            <div class="cms-worship-image-wrap">
+              <div class="cms-worship-parallax-inner">
+                <img id="ws-pc-image" src="" alt="Worship" class="cms-worship-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ MOBILE LAYOUT (<lg) ═══ -->
+        <div class="lg:hidden">
+          <!-- Title + arrows -->
+          <div class="cms-section-header wrap">
+            <h2 class="cms-section-title">WORSHIP<br />SCHEDULE</h2>
+            <div class="cms-nav-controls">
+              <button id="ws-mob-prev" class="cms-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-md"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <span id="ws-mob-indicator" class="cms-nav-indicator">1 / 3</span>
+              <button id="ws-mob-next" class="cms-nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-md"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="cms-divider-loose"></div>
+
+          <!-- Content -->
+          <div class="cms-worship-mob-grid">
+            <div id="ws-mob-content" class="cms-worship-content-box-mob">
+              <!-- Injected via JS -->
+            </div>
+            <div class="cms-worship-image-wrap-mob">
+              <img id="ws-mob-image" src="" alt="Worship" class="cms-worship-image" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Next Generation -->
+    <section class="cms-nextgen-section fade-up" id="nextgen">
+      <div class="cms-container">
+        <!-- Title -->
+        <h2 class="cms-nextgen-title">NEXT<br />GENERATION</h2>
+
+        <!-- Content: subtitle left + grid right -->
+        <div class="cms-nextgen-layout">
+          <!-- Left: subtitle -->
+          <div class="cms-nextgen-subtitle-wrap">
+            <p class="cms-nextgen-subtitle">
+              큰나무교회의 미래,<br />다음세대입니다.
+            </p>
+          </div>
+
+          <!-- Right: 3-col department grid -->
+          <div class="cms-nextgen-grid" id="nextgen-grid">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="cms-gallery-section fade-up" id="community">
+      <div class="cms-container">
+        <!-- Section Header -->
+        <div class="cms-section-header">
+          <div class="cms-section-title-wrap">
+            <h2 class="cms-section-title">GALLERY</h2>
+          </div>
+          <!-- Desktop: Arrow buttons -->
+          <div class="cms-nav-controls-desktop hidden md:flex">
+            <button id="gallery-pc-prev" class="cms-circle-nav-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-sm"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button id="gallery-pc-next" class="cms-circle-nav-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-sm"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          <!-- Mobile: Arrow buttons -->
+          <div class="cms-nav-controls-mobile flex md:hidden">
+            <button id="gallery-mob-prev" class="cms-circle-nav-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-sm"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <span id="gallery-mob-indicator" class="cms-nav-indicator-sm">1 / 3</span>
+            <button id="gallery-mob-next" class="cms-circle-nav-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-sm"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="cms-divider-gallery"></div>
+
+        <!-- Desktop Carousel -->
+        <div id="gallery-scroll" class="cms-gallery-carousel hidden md:flex">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Mobile: 2 items per page -->
+        <div class="md:hidden">
+          <div id="gallery-mob-container" class="cms-gallery-mob-grid">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <!-- All view link -->
+        <div class="cms-gallery-view-all">
+          <a href="#" class="cms-view-all-link-center group/link">
+            view all
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cms-icon-sm-fade group-hover/link:opacity-100"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="cms-welcome-section fade-up">
+      <!-- Background with parallax -->
+      <div id="welcome-bg" class="cms-welcome-bg-wrap">
+        <img
+          src="/UserData/bigtreech/Layouts/bigtreech_Layout/images/welcome_bg.jpg"
+          alt="Welcome"
+          class="cms-welcome-bg-img"
+        />
+        <div class="cms-welcome-bg-overlay"></div>
+      </div>
+
+      <div class="cms-welcome-content">
+        <!-- Label -->
+        <p class="cms-welcome-tag">WELCOME NEW FAMILY</p>
+        <!-- Heading -->
+        <h2 class="cms-welcome-heading">큰나무의 그늘 아래서<br />함께 쉼을 얻고 뿌리 내리세요</h2>
+        <!-- Body -->
+        <p class="cms-welcome-body">
+          큰나무의 그늘 아래서 함께 쉼을 얻고 뿌리 내릴 수 있도록<br />
+          새가족을 위한 따뜻한 안내를 준비했습니다.<br />
+          아래 버튼을 클릭하시면 자세한 등록 과정을 살펴보실 수 있습니다.
+        </p>
+        <!-- CTA -->
+        <a href="#" class="cms-welcome-cta">새가족 등록 안내</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="cms-footer">
+    <div class="cms-container-fluid">
+      <!-- Top: Logo -->
+      <div class="cms-footer-logo-wrap">
+        <img src="/UserData/bigtreech/Layouts/bigtreech_Layout/images/footer_logo.png" alt="큰나무교회 로고" class="cms-footer-logo" />
+      </div>
+
+      <!-- Bottom: Info left + Copyright right -->
+      <div class="cms-footer-bottom">
+        <!-- Left: Contact & Address -->
+        <div class="cms-footer-info">
+          <p class="cms-footer-text">
+            <span class="cms-footer-label">TEL</span> 070-8680-5160, 02-2665-1132
+            <span class="cms-footer-spacer"></span>
+            <span class="cms-footer-label">FAX</span> 02-2663-1097
+          </p>
+          <p class="cms-footer-text">
+            <span class="cms-footer-label">MAIL</span> BIGTREE@BIGTREE.OR.KR
+            <span class="cms-footer-spacer"></span>
+            <span class="cms-footer-label">ADDRESS</span> 서울시 강서구 금낭화로 232 큰나무교회
+          </p>
+        </div>
+
+        <!-- Right: Copyright -->
+        <div class="cms-footer-copyright">
+          <p class="cms-footer-text">
+            COPYRIGHT &copy; 2026 큰나무교회<br />
+            ALL RIGHTS RESERVED. DESIGNED BY (주)소네트정보
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="@Url.Content("~" + jsFile)"></script>
